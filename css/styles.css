@@ -7,8 +7,9 @@
   --primary-white-color: #ffffff;
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
+  --hero-bg-color: #c4c4c4;
   --bright-bg-color: #f5f4fa;
-  --dark-bg-color: #2f303a;
+  --footer-bg-color: #2f303a;
   --footer-contacts-text: rgba(255, 255, 255, 0.6);
 }
 body {
@@ -161,9 +162,24 @@ p {
 /* hero */
 .hero {
   text-align: center;
-  background-color: var(--dark-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-color: var(--hero-bg-color);
+
+  /* фон-картинка */
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(../images/web-studio.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   width: 696px;
@@ -272,6 +288,9 @@ p {
 .filters .item + .item {
   margin-left: 8px;
 }
+/* .filters .item:not(:last-child) {
+  margin-right: 8px;
+}  аналог*/
 .button.secondary {
   background-color: var(--bright-bg-color);
   padding-top: 6px;
@@ -333,7 +352,7 @@ p {
 
 /* footer */
 .footer {
-  background-color: var(--dark-bg-color);
+  background-color: var(--footer-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
