@@ -141,6 +141,7 @@ p {
 .header-contacts .item + .item {
   margin-left: 50px;
 }
+
 .header-contacts .link {
   display: block;
   /* расширяет поле ховера */
@@ -156,6 +157,26 @@ p {
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--accent-color);
+}
+/* contacts-icons ?*/
+.header-contacts .link::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  /* if need */
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+.icon-mail::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/envelope.svg);
+}
+.icon-phone::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/smartphone.svg);
 }
 
 /* Ситили для index.html */
@@ -219,6 +240,29 @@ p {
 }
 .features .item {
   flex-basis: calc((100% - 30px * 3) / 4);
+}
+/* features icons */
+.features .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--bright-bg-color);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 .features .item + .item {
   margin-left: 30px;
@@ -355,6 +399,9 @@ p {
   background-color: var(--footer-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-container {
+  display: flex;
 }
 .footer .logo {
   color: var(--primary-white-color);
