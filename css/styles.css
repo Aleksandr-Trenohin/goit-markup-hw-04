@@ -143,7 +143,8 @@ p {
 }
 
 .header-contacts .link {
-  display: block;
+  display: flex;
+  align-items: center;
   /* расширяет поле ховера */
   padding-top: 32px;
   padding-bottom: 32px;
@@ -161,6 +162,7 @@ p {
 /* contacts-icons ?*/
 .header-contacts .link::before {
   content: '';
+  /* если flex то block не надо */
   display: inline-block;
   margin-right: 10px;
   /* if need */
