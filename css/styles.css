@@ -143,8 +143,9 @@ p {
 }
 
 .header-contacts .link {
-  display: flex;
-  align-items: center;
+  display: block;
+  /* align-items: center; */
+
   /* расширяет поле ховера */
   padding-top: 32px;
   padding-bottom: 32px;
@@ -159,16 +160,18 @@ p {
 .header-contacts .link:focus {
   color: var(--accent-color);
 }
-/* contacts-icons ?*/
-.header-contacts .link::before {
-  content: '';
-  /* если flex то block не надо */
+.mail-icon {
+  width: 16px;
+  height: 12px;
+}
+/* contacts-icons если у родителя flex, то block не надо*/
+/* .header-contacts .link::before {
+  content: '';  
   display: inline-block;
   margin-right: 10px;
-  /* if need */
-  /* background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; */
+  background-position: center;
 }
 .icon-mail::before {
   width: 16px;
@@ -179,7 +182,7 @@ p {
   width: 10px;
   height: 16px;
   background-image: url(../images/smartphone.svg);
-}
+} */
 
 /* Ситили для index.html */
 /* hero */
@@ -195,9 +198,8 @@ p {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../images/web-studio.jpg);
   background-repeat: no-repeat;
@@ -421,12 +423,11 @@ p {
   margin-top: 9px;
 }
 .address-link {
-  display: block;
-
+  /* display: block; */
   color: var(--primary-white-color);
 }
 .address-contacts {
-  display: block;
+  display: inline-block;
 
   color: var(--footer-contacts-text);
 }
