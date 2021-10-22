@@ -70,7 +70,8 @@ p {
 
 /* button или btn */
 .button {
-  border: transparent;
+  border: none;
+  /* border: transparent; (прозрачная)*/
   border-radius: 4px;
 
   text-decoration: none;
@@ -143,8 +144,8 @@ p {
 }
 
 .header-contacts .link {
-  display: block;
-  /* align-items: center; */
+  display: flex;
+  align-items: center;
 
   /* расширяет поле ховера */
   padding-top: 32px;
@@ -161,8 +162,13 @@ p {
   color: var(--accent-color);
 }
 .mail-icon {
+  /* display: block; */
   width: 16px;
   height: 12px;
+  margin-right: 10px;
+}
+.mail-icon:hover {
+  fill: var(--accent-color);
 }
 /* contacts-icons если у родителя flex, то block не надо*/
 /* .header-contacts .link::before {
@@ -245,8 +251,9 @@ p {
 .features .item {
   flex-basis: calc((100% - 30px * 3) / 4);
 }
-/* features icons */
-.features .item::before {
+/* features icons (лучше делать через inline-svg
+из спрайта)*/
+/* .features .item::before {
   display: block;
   content: '';
   height: 120px;
@@ -267,10 +274,26 @@ p {
 }
 .icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
-}
+} */
+
 .features .item + .item {
   margin-left: 30px;
 }
+.features-item-bg {
+  height: 120px;
+  background: var(--bright-bg-color);
+  border-radius: 4px;
+  padding-top: 25px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  margin-bottom: 30px;
+}
+.features-item-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .features .title {
   margin-bottom: 10px;
 
